@@ -46,20 +46,20 @@
 
 .offerItem {
   display: grid;
-  grid-template-columns: 15% auto 20%;
+  grid-template-columns: 80% 20%;
   align-items: center;
   padding: 1.5rem 2rem;
   border: 0.0625rem solid var(--mediumgrey);
   border-radius: 0.25rem;
 }
 
-.offerItem div:nth-child(1),
-.offerItem div:nth-child(3) {
-  justify-self: center;
+.offerItem .mainInfo {
+  display: flex;
+  align-items: center;
 }
 
-.offerItem div:nth-child(2) {
-  margin: 0 1rem;
+.offerItem .mainInfo div {
+  margin-left: 2rem;
 }
 
 .offerItem h2 {

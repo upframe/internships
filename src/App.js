@@ -28,14 +28,14 @@ class App extends Component {
             {this.state.offers.map(offer => {
               return (
                 <div className="offerItem" data-id={offer.id} key={offer.id}>
-                  <div>
+                  <div className="mainInfo">
                     <img className="companyLogo" src={ offer.fields.Photo === undefined ? '/media/default_company.svg' : offer.fields.Photo[0].url}alt={offer.fields.Company}></img>
+                    <div>
+                      <p>{offer.fields.Company}</p>
+                      <h2>{offer.fields.Title}</h2>
+                    </div>
                   </div>
-                  <div>
-                    <p>{offer.fields.Company}</p>
-                    <h2>{offer.fields.Title}</h2>
-                  </div>
-                  <div>
+                  <div className="secondaryInfo">
                     <span className="badge">{offer.fields.Location}</span>
                   </div>
                 </div>
