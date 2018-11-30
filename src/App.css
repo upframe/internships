@@ -21,8 +21,8 @@
 }
 
 .companyLogo {
-  max-height: 5.5rem;
-  min-width: 5.5rem;
+  max-height: 5.300rem;
+  min-width: 5.300rem;
   border-radius: 50%;
 }
 
@@ -46,7 +46,7 @@
 
 .offerItem {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 87% auto;
   align-items: center;
   padding: 1.5rem 2rem;
   border: 0.0625rem solid var(--mediumgrey);
