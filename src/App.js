@@ -29,14 +29,14 @@ class App extends Component {
               return (
                 <div className="offerItem" data-id={offer.id} key={offer.id}>
                   <div>
-                  <img className="companyLogo" src={ offer.fields.Photo === undefined ? '/media/default_company.svg' : offer.fields.Photo[0].url}alt={offer.fields.Company}></img>
+                    <img className="companyLogo" src={ offer.fields.Photo === undefined ? '/media/default_company.svg' : offer.fields.Photo[0].url}alt={offer.fields.Company}></img>
                   </div>
                   <div>
-                    <h2>{offer.fields.Title}</h2>
                     <p>{offer.fields.Company}</p>
+                    <h2>{offer.fields.Title}</h2>
                   </div>
                   <div>
-                    <span className="badge">{offer.fields.City}, {offer.fields.Country}</span>
+                    <span className="badge">{offer.fields.Location}</span>
                   </div>
                 </div>
               )

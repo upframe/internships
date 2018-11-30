@@ -1,24 +1,30 @@
+* {
+  font-family: 'Noto Sans';
+  font-size: 1em;
+}
+
 :root {
   --primary: #FF004B;
   --secondary: #fff;
 
-  --darkgrey: #707070;
-  --lightgrey: #efefef;
+  --darkgrey: #586782;
+  --mediumgrey: #ccd1d8;
+  --lightgrey: #f0f1f5;
 }
 
 .badge {
   color: var(--darkgrey);
   background: var(--lightgrey);
-  font-weight: 600;
-  padding: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
 }
 
 .companyLogo {
-  max-height: 10rem;
-  min-width: 10rem;
+  max-height: 5.5rem;
+  min-width: 5.5rem;
+  border-radius: 50%;
 }
-
 
 .app {
   position: absolute;
@@ -28,29 +34,40 @@
 
 .container {
   max-width: 80%;
-  width: 75rem;
+  width: 45rem;
   min-height: 100%;
   margin: 0 auto;
 }
 
 .offerList {
   display: grid;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: 3rem;
 }
 
 .offerItem {
   display: grid;
-  grid-template-columns: 15% auto 25%;
+  grid-template-columns: 15% auto 20%;
   align-items: center;
-  padding: 2rem;
-  border: 0.1rem solid var(--lightgrey);
+  padding: 1.5rem 2rem;
+  border: 0.0625rem solid var(--mediumgrey);
   border-radius: 0.25rem;
+}
+
+.offerItem div:nth-child(1),
+.offerItem div:nth-child(3) {
+  justify-self: center;
+}
+
+.offerItem div:nth-child(2) {
+  margin: 0 1rem;
 }
 
 .offerItem h2 {
   margin: 0;
+  font-size: 1.3rem;
 }
 
 .offerItem p {
   margin: 0.25rem 0 0 0;
+  color: var(--darkgrey);
 }
