@@ -34,32 +34,29 @@
 
 .container {
   max-width: 80%;
-  width: 45rem;
+  width: 70rem;
   min-height: 100%;
   margin: 0 auto;
 }
 
 .offerList {
   display: grid;
-  grid-row-gap: 3rem;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1rem 2rem;
 }
 
 .offerItem {
-  display: grid;
-  grid-template-columns: 87% auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  padding: 1.5rem 2rem;
   border: 0.0625rem solid var(--mediumgrey);
   border-radius: 0.25rem;
+  padding: 1.5rem 1rem 1.5rem 2rem;
 }
 
 .offerItem .mainInfo {
-  display: flex;
-  align-items: center;
-}
-
-.offerItem .mainInfo div {
-  margin-left: 2rem;
+  flex-basis: 80%;
+  margin: 0 1rem;
 }
 
 .offerItem h2 {
