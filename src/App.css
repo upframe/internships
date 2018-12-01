@@ -41,7 +41,7 @@
 
 .offerList {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem 2rem;
 }
 
