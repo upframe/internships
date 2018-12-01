@@ -33,8 +33,8 @@ class App extends Component {
                     <p>{offer.fields.Company}</p>
                     <h2>{offer.fields.Title}</h2>
                   </div>
-                  <div className="secondaryInfo">
-                    <span className="badge">{offer.fields.Location}</span>
+                  <div className="secondaryInfo badge">
+                    {offer.fields.Location}
                   </div>
                 </div>
               )

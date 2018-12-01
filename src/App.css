@@ -68,3 +68,19 @@
   margin: 0.25rem 0 0 0;
   color: var(--darkgrey);
 }
+
+@media (max-width: 1040px) {
+  .offerList {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .offerItem {
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+  }
+
+  .offerItem .mainInfo {
+    margin: 1rem 0;
+  }
+}
