@@ -23,6 +23,14 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        {/*
+        <header>
+          <div>
+            <h1>Title</h1>
+            <p>Paragraph</p>
+          </div>
+        </header>
+        */}
         <div className="container">
           <div className="offerList">
             {this.state.offers.map(offer => {

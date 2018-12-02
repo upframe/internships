@@ -6,11 +6,13 @@
 :root {
   --primary: #eb0041;
   --secondary: #ffdee7;
-  --third: #fff;
+  --third: #2b3778;
 
   --darkgrey: #586782;
   --mediumgrey: #ccd1d8;
   --lightgrey: #f0f1f5;
+
+  --primarytext: #fff;
 }
 
 .badge {
@@ -32,6 +34,20 @@
   width: 100%;
   height: 100%;
 }
+
+/*
+header {
+  display: flex;
+  justify-content: center;
+  min-height: 28rem;
+  background-color: var(--third);
+  color: var(--primarytext);
+}
+
+header div {
+
+}
+*/
 
 .container {
   max-width: 80%;
@@ -59,28 +75,33 @@
   flex-basis: 80%;
 }
 
-.offerItem h2 {
-  margin: 0;
-  font-size: 1.3rem;
-}
-
-.offerItem p {
+.offerItem .mainInfo p {
   margin: 0.25rem 0 0 0;
   color: var(--primary);
+  letter-spacing: 0.025rem;
+}
+
+.offerItem .mainInfo h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.03rem;
 }
 
 @media (max-width: 1040px) {
+  .container {
+    max-width: 90%;
+  }
+
   .offerList {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
 
   .offerItem {
-    flex-direction: column;
     padding: 1.5rem 2rem;
   }
 
   .offerItem .mainInfo {
-    margin: 0 0 1rem 0;
+    margin: 0 1rem 0 0;
   }
 }
