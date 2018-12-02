@@ -28,9 +28,8 @@ class App extends Component {
             {this.state.offers.map(offer => {
               return (
                 <div className="offerItem" data-id={offer.id} key={offer.id}>
-                  <img className="companyLogo" src={offer.fields.Photo === undefined ? '/media/default_company.svg' : offer.fields.Photo[0].url} alt={offer.fields.Company}></img>
                   <div className="mainInfo">
-                    <p>{offer.fields.Company}</p>
+                    <p id="company">{offer.fields.Company}</p>
                     <h2>{offer.fields.Title}</h2>
                   </div>
                   <div className="secondaryInfo badge">

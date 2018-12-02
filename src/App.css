@@ -4,8 +4,9 @@
 }
 
 :root {
-  --primary: #FF004B;
-  --secondary: #fff;
+  --primary: #eb0041;
+  --secondary: #ffdee7;
+  --third: #fff;
 
   --darkgrey: #586782;
   --mediumgrey: #ccd1d8;
@@ -13,8 +14,8 @@
 }
 
 .badge {
-  color: var(--darkgrey);
-  background: var(--lightgrey);
+  color: var(--primary);
+  background: var(--secondary);
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
@@ -51,12 +52,11 @@
   align-items: center;
   border: 0.0625rem solid var(--mediumgrey);
   border-radius: 0.25rem;
-  padding: 1.5rem 1rem 1.5rem 2rem;
+  padding: 1.6rem 1rem 1.6rem 2.4rem;
 }
 
 .offerItem .mainInfo {
   flex-basis: 80%;
-  margin: 0 1rem;
 }
 
 .offerItem h2 {
@@ -66,7 +66,7 @@
 
 .offerItem p {
   margin: 0.25rem 0 0 0;
-  color: var(--darkgrey);
+  color: var(--primary);
 }
 
 @media (max-width: 1040px) {
