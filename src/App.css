@@ -86,7 +86,7 @@ header {
 }
 
 header div {
-  max-width: 35rem;
+  max-width: 35%;
   margin-top: 2rem;
   text-align: center;
 }
@@ -140,7 +140,27 @@ header div p {
   letter-spacing: 0.03rem;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 970px) {
+  nav .wrapper {
+    max-width: 95%;
+  }
+
+  header {
+    min-height: 16rem;
+  }
+
+  header div {
+    max-width: 90%;
+  }
+
+  header div h1 {
+    font-size: 3.3rem;
+  }
+
+  header div p {
+    font-size: 1.1rem;
+  }
+
   .container {
     max-width: 90%;
   }
