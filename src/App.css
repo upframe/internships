@@ -124,6 +124,11 @@ header div p {
   padding: 1.6rem 1rem 1.6rem 2.4rem;
 }
 
+.offerItem:hover {
+  border-color: var(--primary);
+  background-color: var(--secondary);
+}
+
 .offerItem .mainInfo {
   flex-basis: 80%;
 }
