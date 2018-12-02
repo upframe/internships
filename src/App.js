@@ -1,25 +1,53 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import APIservice from './services/api.js';
+
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      offers: []
+    }
+
+    APIservice.getAllOffers().then(data => 
+      this.setState({ offers: data.records })
+    )
+  }
+
+  loadOffers() {
+    return APIservice.getAllOffers()
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className="app">
+        {/*
+        <header>
+          <div>
+            <h1>Title</h1>
+            <p>Paragraph</p>
+          </div>
         </header>
+        */}
+        <div className="container">
+          <div className="offerList">
+            {this.state.offers.map(offer => {
+              return (
+                <div className="offerItem" data-id={offer.id} key={offer.id}>
+                  <div className="mainInfo">
+                    <p id="company">{offer.fields.Company}</p>
+                    <h2>{offer.fields.Title}</h2>
+                  </div>
+                  <div className="secondaryInfo badge">
+                    {offer.fields.Location}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     );
   }

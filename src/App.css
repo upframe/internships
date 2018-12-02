@@ -1,32 +1,117 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Noto Sans';
+  font-size: 1em;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+:root {
+  --primary: #eb0041;
+  --secondary: #ffdee7;
+  --third: #2b3778;
+
+  --darkgrey: #586782;
+  --mediumgrey: #ccd1d8;
+  --lightgrey: #f0f1f5;
+
+  --primarytext: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.badge {
+  color: var(--primary);
+  background: var(--secondary);
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.companyLogo {
+  max-height: 5.300rem;
+  min-width: 5.300rem;
+  border-radius: 50%;
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 28rem;
+  background-color: var(--third);
+  color: var(--primarytext);
 }
 
-.App-link {
-  color: #61dafb;
+header div {
+
+}
+*/
+
+.container {
+  max-width: 80%;
+  width: 70rem;
+  min-height: 100%;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.offerList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem 2rem;
+}
+
+.offerItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.0625rem solid var(--mediumgrey);
+  border-radius: 0.25rem;
+  padding: 1.6rem 1rem 1.6rem 2.4rem;
+}
+
+.offerItem .mainInfo {
+  flex-basis: 80%;
+}
+
+.offerItem .mainInfo p {
+  margin: 0.25rem 0 0 0;
+  color: var(--primary);
+  letter-spacing: 0.025rem;
+}
+
+.offerItem .mainInfo h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.03rem;
+}
+
+@media (max-width: 1040px) {
+  .container {
+    max-width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .offerList {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .offerItem {
+    padding: 1.5rem 2rem;
+  }
+
+  .offerItem .mainInfo {
+    margin: 0 1rem 0 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .offerItem {
+    flex-direction: column;
+  }
+
+  .offerItem .mainInfo {
+    margin: 0 0 1rem 0;
   }
 }
