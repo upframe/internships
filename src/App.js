@@ -23,14 +23,23 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        {/*
+        <nav>
+          <div className="wrapper">
+            <img className="logo" src="/media/logo.svg" alt="Upframe"></img>
+            <ul>
+              <li>
+                Internships
+              </li>
+            </ul>
+          </div>
+        </nav>
         <header>
           <div>
-            <h1>Title</h1>
-            <p>Paragraph</p>
+            <h1>Startup Mojo</h1>
+            <p>Find your first student internship across the hottest startups
+              in Europe and jumpstart your f*cking career.</p>
           </div>
         </header>
-        */}
         <div className="container">
           <div className="offerList">
             {this.state.offers.map(offer => {

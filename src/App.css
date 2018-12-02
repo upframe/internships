@@ -35,25 +35,78 @@
   height: 100%;
 }
 
-/*
+nav {
+  height: 4rem;
+  background-color: var(--third);
+  color: var(--primarytext);
+  z-index: 0;
+}
+
+nav .wrapper {
+  display: flex;
+  width: 70rem;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+nav .logo {
+  object-fit: contain;
+  max-width: 12.5rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+}
+
+nav ul li::after {
+  display: block;
+  position: relative;
+  content: "";
+  background-color: var(--primary);
+  height: 0.25rem;
+  width: 50%;
+  margin: 0.25rem auto 0 auto;
+}
+
 header {
   display: flex;
   justify-content: center;
-  min-height: 28rem;
+  min-height: 20rem;
   background-color: var(--third);
   color: var(--primarytext);
 }
 
 header div {
-
+  max-width: 35rem;
+  margin-top: 2rem;
+  text-align: center;
 }
-*/
+
+header div h1 {
+  font-size: 4.125rem;
+  font-weight: 500;
+  margin: auto auto 1.625rem auto;
+}
+
+header div p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 0;
+}
 
 .container {
   max-width: 80%;
   width: 70rem;
-  min-height: 100%;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
 .offerList {
