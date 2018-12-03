@@ -8,6 +8,8 @@ class App extends Component {
     super(props)
 
     this.state = {
+      name: '',
+      email: '',
       offers: []
     }
 
@@ -15,6 +17,9 @@ class App extends Component {
       this.setState({ offers: data.records })
     )
   }
+
+  handleNameChange = (event) => { this.setState({ name: event.target.value }) }
+  handleEmailChange = (event) => { this.setState({ email: event.target.value }) }
 
   loadOffers() {
     return APIservice.getAllOffers()
@@ -55,6 +60,15 @@ class App extends Component {
                 </div>
               )
             })}
+          </div>
+          <div className="application">
+            <div>
+              <h1>So, you're in?</h1>
+              <p>We'll update you as soon as we have everything set so you
+                can find or post your internship oportunity</p>
+              <input type="text" onChange={this.handleNameChange} value={this.state.name} placeholder="Your name" required></input>
+              <input type="email" onChange={this.handleEmailChange} value={this.state.email} placeholder="Tyrone@example.com" required></input>
+            </div>
           </div>
         </div>
       </div>

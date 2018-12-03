@@ -1,4 +1,5 @@
-* {
+html,
+body {
   font-family: 'Noto Sans Display', 'Noto Sans', sans-serif;
   font-size: 1em;
 }
@@ -41,6 +42,37 @@
   --lightgrey: #f0f1f5;
 
   --primarytext: #fff;
+  --secondarytext: #eb0041;
+
+  --primaryborder: #ccd1d8;
+}
+
+
+/*****************************
+ * UPFRAME THEME
+ *****************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input {
+  padding: 1rem;
+  border: 1px solid var(--primaryborder);
+  border-radius: 0.25rem;
+  margin: 1rem auto;
+  outline: none;
+  transition: .25s ease-in-out;
+}
+
+input:hover,
+input:focus {
+  border-color: var(--primary);
 }
 
 .badge {
@@ -51,6 +83,10 @@
   border-radius: 0.25rem;
   letter-spacing: 0.0375rem;
 }
+
+/*****************************
+ * INTERNSHIPS
+ *****************************/
 
 .companyLogo {
   max-height: 5.300rem;
@@ -151,10 +187,11 @@ header div p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  letter-spacing: 0.0625rem;
+  padding: 2.4rem 1rem 2.4rem 2.4rem;
   border: 0.0625rem solid var(--mediumgrey);
   border-radius: 0.25rem;
-  padding: 2.4rem 1rem 2.4rem 2.4rem;
-  letter-spacing: 0.0625rem;
+  transition: .25s ease-in-out;
 }
 
 .offerItem:hover {
@@ -243,4 +280,26 @@ header div p {
   .offerItem .mainInfo {
     margin: 0 0 1rem 0;
   }
+}
+
+.application {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.application div {
+  max-width: 50%;
+}
+
+.application div h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.application div input {
+  display: block;
+  max-width: 50%;
+  width: 15rem;
 }
