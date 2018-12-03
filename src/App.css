@@ -215,10 +215,38 @@ header div p {
   margin: 0;
 }
 
+.application {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.application div {
+  max-width: 50%;
+}
+
+.application div h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.application div input {
+  display: block;
+  max-width: 50%;
+  width: 20rem;
+}
+
 @media (max-width: 1150px) {
   header div {
     max-width: 45%;
   }
+
+  .application div {
+    max-width: 65%;
+  }
+
+  
 }
 
 @media (max-width: 970px) {
@@ -246,11 +274,6 @@ header div p {
     max-width: 90%;
   }
 
-  .offerList {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-
   .offerItem {
     padding: 1.5rem 2rem;
   }
@@ -264,11 +287,25 @@ header div p {
   header div {
     max-width: 75%;
   }
+
+  .offerList {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .application div {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 450px) {
-  header div {
+  header div,
+  .application div {
     max-width: 90%;
+  }
+
+  .application div input {
+    max-width: 70%;
   }
 }
 
@@ -280,26 +317,4 @@ header div p {
   .offerItem .mainInfo {
     margin: 0 0 1rem 0;
   }
-}
-
-.application {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
-  text-align: center;
-}
-
-.application div {
-  max-width: 50%;
-}
-
-.application div h1 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-.application div input {
-  display: block;
-  max-width: 50%;
-  width: 15rem;
 }
