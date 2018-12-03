@@ -27,7 +27,7 @@ body {
 
 @font-face {
   font-family: 'Noto Sans Display';
-  src: url('/fonts/NotoSansDisplay-Thin.ttf') format('truetype');
+  src: url('/fonts/NotoSansDisplay-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
