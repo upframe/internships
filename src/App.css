@@ -65,7 +65,6 @@
 }
 
 nav {
-  height: 4rem;
   background-color: var(--third);
   color: var(--primarytext);
   z-index: 0;
@@ -74,13 +73,14 @@ nav {
 nav .wrapper {
   display: flex;
   width: 75rem;
+  height: 6rem;
   max-width: 90%;
   margin: 0 auto;
 }
 
 nav .logo {
   object-fit: contain;
-  max-width: 12.5rem;
+  max-width: 10rem;
 }
 
 nav ul {
@@ -131,7 +131,7 @@ header div h1 {
 header div p {
   font-size: 1.3rem;
   font-weight: 300;
-  letter-spacing: 0.0125rem;
+  letter-spacing: 0.05rem;
   margin: 0;
 }
 
@@ -173,9 +173,15 @@ header div p {
 }
 
 .offerItem .mainInfo h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin: 0;
+}
+
+@media (max-width: 1150px) {
+  header div {
+    max-width: 45%;
+  }
 }
 
 @media (max-width: 970px) {
@@ -188,7 +194,7 @@ header div p {
   }
 
   header div {
-    max-width: 90%;
+    max-width: 50%;
   }
 
   header div h1 {
@@ -214,6 +220,18 @@ header div p {
 
   .offerItem .mainInfo {
     margin: 0 1rem 0 0;
+  }
+}
+
+@media (max-width: 720px) {
+  header div {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  header div {
+    max-width: 90%;
   }
 }
 
