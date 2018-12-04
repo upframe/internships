@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 import APIservice from '../services/api.js';
 
@@ -11,9 +12,13 @@ export default class Main extends Component {
   }
 
   componentDidMount () {
-    APIservice.getAllOffers().then(data => 
+    APIservice.getAllOffers().then(data =>
       this.setState({ offers: data.records })
     )
+  }
+
+  createLink = (company, position) => {
+    return '/' + company.toLowerCase() + '/' + position.toLowerCase().replace(/ /g, '-')
   }
 
   render() {
@@ -40,15 +45,17 @@ export default class Main extends Component {
           <div className="offerList">
             {this.state.offers.map(offer => {
               return (
-                <div className="offerItem" data-id={offer.id} key={offer.id}>
-                  <div className="mainInfo">
-                    <p id="company">{offer.fields.Company}</p>
-                    <h2>{offer.fields.Title}</h2>
+                <Link to={this.createLink(offer.fields.Company, offer.fields.Title)} style={{ textDecoration: 'none' }}>
+                  <div className="offerItem" data-id={offer.id} key={offer.id}>
+                    <div className="mainInfo">
+                      <p id="company">{offer.fields.Company}</p>
+                      <h2>{offer.fields.Title}</h2>
+                    </div>
+                    <div className="secondaryInfo badge">
+                      {offer.fields.Location}
+                    </div>
                   </div>
-                  <div className="secondaryInfo badge">
-                    {offer.fields.Location}
-                  </div>
-                </div>
+                </Link> 
               )
             })}
           </div>
