@@ -250,6 +250,7 @@ header div p {
 
 .application .mc-field-group input {
   width: 14rem;
+  -webkit-appearance: none;
 }
 
 .application div.clear {
