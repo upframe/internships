@@ -184,6 +184,14 @@ header div p {
   grid-gap: 1rem 2rem;
 }
 
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
+  color: black;
+}
+
 .offerItem {
   display: flex;
   flex-direction: row;
