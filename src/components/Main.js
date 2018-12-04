@@ -14,10 +14,6 @@ export default class Main extends Component {
       this.setState({ offers: data.records })
     )
   }
-  
-  loadOffers() {
-    return APIservice.getAllOffers()
-  }
 
   render() {
     return(
