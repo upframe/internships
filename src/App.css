@@ -217,37 +217,59 @@ header div p {
 }
 
 .application {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.application .title {
   text-align: center;
 }
 
-.application div {
-  max-width: 50%;
+.application .title h1 {
+  color: #29358c;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.application div h1 {
-  font-size: 3rem;
-  font-weight: 500;
+.application .content p {
+  color: #586782;
 }
 
-.application div input {
-  display: block;
-  max-width: 50%;
-  width: 20rem;
+.application form {
+  display: flex;
+  justify-content: center;
+}
+
+.application form div#mc_embed_signup_scroll {
+  display: flex;
+}
+
+.application .mc-field-group {
+  margin: 1rem;
+}
+
+.application .mc-field-group input {
+  width: 14rem;
+}
+
+.application div.clear {
+  display: flex;
+  align-items: center;
+}
+
+.application input[type="submit"] {
+  background: #ff004b;
+  color: var(--primarytext);
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 10rem;
+  border-radius: 2rem;
 }
 
 @media (max-width: 1150px) {
   header div {
     max-width: 45%;
   }
-
-  .application div {
-    max-width: 65%;
-  }
-
-  
 }
 
 @media (max-width: 970px) {
@@ -282,6 +304,14 @@ header div p {
   .offerItem .mainInfo {
     margin: 0 1rem 0 0;
   }
+
+  .application form div#mc_embed_signup_scroll {
+    flex-direction: column;
+  }
+
+  .application .mc-field-group {
+    margin: 0;
+  }
 }
 
 @media (max-width: 720px) {
@@ -293,21 +323,18 @@ header div p {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
-
-  .application div {
-    max-width: 80%;
-  }
 }
 
 @media (max-width: 450px) {
-  header div,
-  .application div {
+  header div {
     max-width: 90%;
   }
 
-  .application div input {
-    max-width: 70%;
-  }
+  .application {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }  
 }
 
 @media (max-width: 350px) {
