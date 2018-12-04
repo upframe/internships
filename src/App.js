@@ -5,6 +5,7 @@ import './App.css';
 
 import Main from './components/Main';
 import Subscribe from './components/Subscribe';
+import Apply from './components/Apply';
 
 export default class App extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path='/' component={Main} />
             <Route exact path='/subscribe' component={Subscribe} />
+            <Route path='/' component={Apply} />
           </Switch>
         </div>
       </Router>
