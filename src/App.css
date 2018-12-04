@@ -259,6 +259,7 @@ header div p {
 }
 
 .application input[type="submit"] {
+  -webkit-appearance: none;
   background: #ff004b;
   color: var(--primarytext);
   font-size: 1rem;
