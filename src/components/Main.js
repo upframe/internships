@@ -5,11 +5,12 @@ import APIservice from '../services/api.js';
 export default class Main extends Component {
   constructor(props) {
     super(props);
-    
     this.state = {
       offers: []
     }
-  
+  }
+
+  componentDidMount () {
     APIservice.getAllOffers().then(data => 
       this.setState({ offers: data.records })
     )
