@@ -23,7 +23,7 @@ export default class Subscribe extends Component {
           <div className="content">
             <p>Na Upframe somos frequentemente abordados por startups de pequena e média dimensão à procura de estudantes que lhes possam ajudar. Por outro lado é normal encontrar pessoal como tu à procura de experiência real e que se pretende atirar para um ambiente mais inovador e empreendedor por saber que em vários aspetos a universidade ficou presa no século 19 e que o canudo por si só já não é tudo. Mereces melhor.</p>
             <p>Queremos ajudar-te a dar o próximo passo e elevar a tua carreira a um novo nível. Por nos encontrarmos entre o meio universitário e o meio empreendedor, assim como dentro e fora de Portugal, sentimos que estamos bem posicionados para te ajudar a encontrar oportunidades europa fora. Por isso mesmo estamos a trabalhar num projeto piloto com o objetivo de te ligar às startups mais inovadoras em Portugal e na Europa.</p>
-            <p>Numa fase inicial vamos trabalhar com startups para te apresentar oportunidades a part-time ou de verão nas áreas da tecnologia, business, marketing e design digital. (a escrever...)</p>
+            <p>Numa fase inicial vamos trabalhar com startups para te apresentar oportunidades a part-time ou de verão nas áreas da tecnologia, business, marketing e design digital.</p>
           </div>
           {/*<!-- Begin Mailchimp Signup Form -->*/}
           <div id="mc_embed_signup">
