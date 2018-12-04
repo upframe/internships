@@ -109,7 +109,7 @@ nav {
 nav .wrapper {
   display: flex;
   width: 75rem;
-  height: 6rem;
+  height: 5rem;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -130,7 +130,7 @@ nav ul {
 nav ul li {
   text-transform: uppercase;
   letter-spacing: 0.1125rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 nav ul li::after {
@@ -138,27 +138,28 @@ nav ul li::after {
   position: relative;
   content: "";
   background-color: var(--primary);
-  height: 0.25rem;
+  height: 0.15rem;
   width: 80%;
+  border-radius: 2rem;
   margin: 0.25rem auto 0 auto;
 }
 
 header {
   display: flex;
   justify-content: center;
-  min-height: 20rem;
+  min-height: 18rem;
   background-color: var(--third);
   color: var(--primarytext);
 }
 
 header div {
-  max-width: 35%;
+  max-width: 30%;
   margin-top: 2rem;
   text-align: center;
 }
 
 header div h1 {
-  font-size: 4.125rem;
+  font-size: 3.5rem;
   font-weight: 500;
   letter-spacing: 0.025rem;
   margin: auto auto 1.625rem auto;
