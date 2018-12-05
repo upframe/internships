@@ -12,6 +12,8 @@ export default class Main extends Component {
   }
 
   componentDidMount () {
+    document.title = 'Startup Mojo'
+    
     APIservice.getAllOffers().then(data =>
       this.setState({ offers: data.records })
     )
