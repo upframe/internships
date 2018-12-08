@@ -20,8 +20,12 @@ export default class Apply extends PureComponent {
 
   getCurrentJob = (records) => {
     for (let i = 0; i < records.length; i++) {
-      if (records[i].fields.Company.toLowerCase().replace(/ /g, '-') === this.state.company && this.state.position === records[i].fields.Title.toLowerCase().replace(/ /g, '-')) {
-        return records[i]
+      try {
+        if (records[i].fields.Company.toLowerCase().replace(/ /g, '-') === this.state.company && this.state.position === records[i].fields.Title.toLowerCase().replace(/ /g, '-')) {
+          return records[i]
+        }
+      } catch {
+        //Something is undefined, just next
       }
     }
   }
@@ -44,7 +48,6 @@ export default class Apply extends PureComponent {
         <Redirect to='/404' />
       )
     } else {
-      console.log(this.props.currentInternship)
       return (
         <div>
           <nav>

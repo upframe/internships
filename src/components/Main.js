@@ -14,9 +14,15 @@ export default class Main extends Component {
   componentDidMount () {
     document.title = 'Startup Mojo'
     
-    APIservice.getAllOffers().then(data =>
-      this.setState({ offers: data.records })
-    )
+    APIservice.getAllOffers().then(data => {
+      let filteredOffers = data.records.filter(element => this.isComplete(element))
+      this.setState({ offers: filteredOffers })
+    })
+  }
+
+  //Verifica se uma oferta esta completa para nao crashar o site
+  isComplete = (offer) => {
+    return offer.fields.Company !== undefined && offer.fields.Title !== undefined && offer.fields.Location !== undefined
   }
 
   createLink = (company, position) => {
@@ -47,7 +53,7 @@ export default class Main extends Component {
           <div className="offerList">
             {this.state.offers.map(offer => {
               return (
-                <Link to={this.createLink(offer.fields.Company, offer.fields.Title)} style={{ textDecoration: 'none' }}>
+                <Link to={this.createLink(offer.fields.Company, offer.fields.Title)} style={{ textDecoration: 'none' }} key={offer.id}>
                   <div className="offerItem" data-id={offer.id} key={offer.id}>
                     <div className="mainInfo">
                       <p id="company">{offer.fields.Company}</p>
