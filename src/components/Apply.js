@@ -1,14 +1,45 @@
 import React, { PureComponent } from 'react';
 import { Redirect } from 'react-router-dom';
+import APIservice from '../services/api.js';
 
 export default class Apply extends PureComponent {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      company: window.location.pathname.split('/')[1],
+      position: window.location.pathname.split('/')[2],
+      currentInternship: {
+        fields: {
+          Company: 'Loading',
+          Title: 'Loading'
+        }
+      }
+    }
+  }
+
+  getCurrentJob = (records) => {
+    for (let i = 0; i < records.length; i++) {
+      if (records[i].fields.Company.toLowerCase().replace(/ /g, '-') === this.state.company && this.state.position === records[i].fields.Title.toLowerCase().replace(/ /g, '-')) {
+        return records[i]
+      }
+    }
+  }
+
+  componentDidMount() {
+    APIservice.getAllOffers().then(data => {
+      this.setState({
+        currentInternship: this.getCurrentJob(data.records)
+      })
+    })
+  }
 
   apply = () => {
     alert('Applying')
   }
 
   render() {
-    if (this.props.currentInternship === undefined) {
+    if (this.state.currentInternship === undefined) {
       return (
         <Redirect to='/404' />
       )
@@ -28,11 +59,11 @@ export default class Apply extends PureComponent {
           </nav>
           <div className="header-smaller">
             <div>
-              <h1>{this.props.currentInternship.fields.Title}</h1>
+              <h1>{this.state.currentInternship.fields.Title}</h1>
             </div>
           </div>
           <div className="container">
-            INTERNSHIPS > {this.props.currentInternship.fields.Company.toUpperCase()} > {this.props.currentInternship.fields.Title.toUpperCase()}
+            INTERNSHIPS > {this.state.currentInternship.fields.Company.toUpperCase()} > {this.state.currentInternship.fields.Title.toUpperCase()}
             <div>
               <h1>
                 Job description
