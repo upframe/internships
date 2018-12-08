@@ -1,18 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-export default class Subscribe extends Component {
-  constructor(props) {
-    super(props);
+export default class Subscribe extends PureComponent {
 
-    this.state = {
-      name: '',
-      email: ''
-    }
-  }
-
-  handleNameChange = (event) => { this.setState({ name: event.target.value }) }
-  handleEmailChange = (event) => { this.setState({ email: event.target.value }) }
-  
   render() {
     return(
       <div className="container">
@@ -27,20 +16,20 @@ export default class Subscribe extends Component {
           </div>
           {/*<!-- Begin Mailchimp Signup Form -->*/}
           <div id="mc_embed_signup">
-            <form action="https://upframe.us19.list-manage.com/subscribe/post?u=bb91a1bf156e7f95e1f691e1b&amp;id=da9e5c5243" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
+            <form action="https://upframe.us19.list-manage.com/subscribe/post?u=bb91a1bf156e7f95e1f691e1b&amp;id=da9e5c5243" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
               <div id="mc_embed_signup_scroll">
                 <div className="mc-field-group">
-                  <input type="text" placeholder="Nome" onChange={this.handleNameChange} value={this.state.name} name="NAME" className="required" id="mce-NAME"></input>
+                  <input type="text" placeholder="Nome" name="NAME" className="required" id="mce-NAME"></input>
                 </div>
                 <div className="mc-field-group">
-                  <input type="email" placeholder="Endereço de email" onChange={this.handleEmailChange} value={this.state.email} name="EMAIL" className="required email" id="mce-EMAIL"></input>
+                  <input type="email" placeholder="Endereço de email" name="EMAIL" className="required email" id="mce-EMAIL"></input>
                 </div>
                 <div id="mce-responses" className="clear">
                   <div className="response" id="mce-error-response" style={{display:"none"}}></div>
                   <div className="response" id="mce-success-response" style={{display:"none"}}></div>
                 </div>    {/*<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->*/}
                 <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
-                  <input type="text" name="b_bb91a1bf156e7f95e1f691e1b_da9e5c5243" tabindex="-1" value=""></input>
+                  <input type="text" name="b_bb91a1bf156e7f95e1f691e1b_da9e5c5243" tabIndex="-1"></input>
                   </div>
                 <div className="clear">
                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"></input>
