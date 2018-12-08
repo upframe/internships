@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css';
@@ -9,10 +9,9 @@ import Apply from './components/Apply';
 import Companies from './components/Companies';
 import ErrorPage from './components/ErrorPage';
 
-export default class App extends Component {
+export default class App extends PureComponent {
 
   render() {
-    console.log(window.location.href)
     return (
       <Router>
         <div className="app">
@@ -22,6 +21,7 @@ export default class App extends Component {
             <Route exact path='/companies' component={Companies} />
             <Route exact path='/404' component={ErrorPage} />
             <Route path='/:company/:position' component={Apply} />
+            <Route path='/:random' component={ErrorPage} />
           </Switch>
         </div>
       </Router>
