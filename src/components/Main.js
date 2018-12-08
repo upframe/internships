@@ -22,7 +22,15 @@ export default class Main extends Component {
 
   //Verifica se uma oferta esta completa para nao crashar o site
   isComplete = (offer) => {
-    return offer.fields.Company !== undefined && offer.fields.Title !== undefined && offer.fields.Location !== undefined
+    return offer.fields.Company !== undefined 
+        && offer.fields.Title !== undefined 
+        && offer.fields.Location !== undefined
+        && offer.fields.Country !== undefined
+        && offer.fields.JobDescription !== undefined
+        && offer.fields.MainRequirements !== undefined
+        && offer.fields.AmbassadorBio !== undefined
+        && offer.fields.AmbassadorPic !== undefined
+        && offer.fields.AmbassadorTwitter !== undefined
   }
 
   createLink = (company, position) => {
