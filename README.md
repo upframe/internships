@@ -6,3 +6,5 @@
 ![David](https://david-dm.org/upframe/internships.svg)
 
 Fast and straightforward page which loads Internship offers from AirTable.
+
+[GPL © Upframe](../master/LICENSE)
