@@ -20,7 +20,7 @@ export default class Main extends Component {
   }
 
   createLink = (company, position) => {
-    return '/' + company.toLowerCase() + '/' + position.toLowerCase().replace(/ /g, '-')
+    return '/' + company.toLowerCase().replace(/ /g, '-') + '/' + position.toLowerCase().replace(/ /g, '-')
   }
 
   render() {
