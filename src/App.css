@@ -276,6 +276,20 @@ a:active {
   border-radius: 2rem;
 }
 
+.header-smaller {
+  display: flex;
+  justify-content: center;
+  min-height: 12rem;
+  background-color: var(--third);
+  color: var(--primarytext);
+}
+
+.header-smaller div {
+  max-width: 30%;
+  margin-top: 3rem;
+  text-align: center;
+}
+
 @media (max-width: 1150px) {
   header div {
     max-width: 45%;
