@@ -531,6 +531,7 @@ header p {
   }
 
   #apply main #calltoaction {
+    display: flex;
     position: fixed;
     width: 100%;
     bottom: 0;
