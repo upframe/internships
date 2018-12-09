@@ -69,7 +69,7 @@ class Apply extends PureComponent {
 
           <header>
             <div>
-              <h1>{this.state.currentInternship.Title} {this.state.currentInternship.Location}</h1>
+              <h1 className="title-1">{this.state.currentInternship.Title} {this.state.currentInternship.Location}</h1>
             </div>
           </header>
 
@@ -100,7 +100,9 @@ class Apply extends PureComponent {
                 </div>
 
                 <div className="flex flex-column">
-                  <button className="btn btn-primary" onClick={this.apply}>Apply now</button>
+                  <div id="calltoaction">
+                    <button className="btn btn-primary" onClick={this.apply}>Apply now</button>
+                  </div>
                   <div className="card color-darkgray">
                     <div className="flex flex-column items-center">
                       <img className="image round" id="ambassador-profile" src={this.state.currentInternship.AmbassadorPic[0].thumbnails.large.url} alt='Ambassador'></img>

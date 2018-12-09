@@ -95,6 +95,14 @@ h6 {
   margin: 0;
 }
 
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
+  color: black;
+}
+
 .title-1 {
   font-size: 2.5rem;
 }
@@ -175,6 +183,10 @@ input:focus {
   border: none;
   border-radius: 0.25rem;
   outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn.btn-primary {
@@ -312,21 +324,20 @@ header p {
   margin: 0;
 }
 
-.offerList {
+/* * * * * * * * *
+ * LANDING PAGE
+ * * * * * * * * */
+#main header h1 {
+  margin: auto auto 1.625rem auto;
+}
+
+#main .offerList {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem 2rem;
 }
 
-a,
-a:hover,
-a:visited,
-a:focus,
-a:active {
-  color: black;
-}
-
-.offerItem {
+#main .offerList .offerItem {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -337,27 +348,56 @@ a:active {
   transition: .25s ease-in-out;
 }
 
-.offerItem:hover {
+#main .offerList .offerItem:hover {
   border-color: var(--primary);
   background-color: var(--secondary);
 }
 
-.offerItem .mainInfo {
+#main .offerList .offerItem .mainInfo {
   flex-basis: 80%;
 }
 
-.offerItem .mainInfo p {
+#main .offerList .offerItem .mainInfo p {
   font-weight: 400;
   color: var(--primary);
   margin: 0;
 }
 
-.offerItem .mainInfo h2 {
+#main .offerList .offerItem .mainInfo h2 {
   font-size: 1.2rem;
   font-weight: 500;
   margin: 0;
 }
 
+/* * * * * * * * *
+ * APPLY PAGE
+ * * * * * * * * */
+#apply header {
+  min-height: 15rem;
+}
+
+#apply main .container .grid {
+  margin-top: 2rem;
+  grid-template-columns: 2.7fr 1fr;
+  grid-column-gap: 8rem;
+}
+
+#apply #calltoaction button {
+  width: 100%;
+}
+
+#apply .card {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+#apply #ambassador-profile {
+  max-width: 6rem;
+}
+
+/* * * * * * * * *
+ * SUBSCRIBE PAGE
+ * * * * * * * * */
 .application {
   max-width: 65%;
   margin: 0 auto;
@@ -411,35 +451,8 @@ a:active {
 }
 
 /* * * * * * * * *
- * PAGE SPECIFICS
+ * MEDIA QUERIES
  * * * * * * * * */
-#main header h1 {
-  margin: auto auto 1.625rem auto;
-}
-
-#apply header {
-  min-height: 15rem;
-}
-
-#apply header h1 {
-  font-size: 3rem;
-}
-
-#apply main .container .grid {
-  margin-top: 2rem;
-  grid-template-columns: 2.7fr 1fr;
-  grid-column-gap: 8rem;
-}
-
-#apply .card {
-  margin-top: 2rem;
-  padding: 2rem;
-}
-
-#apply #ambassador-profile {
-  max-width: 6rem;
-}
-
 @media (max-width: 1150px) {
   header div {
     max-width: 45%;
@@ -469,7 +482,7 @@ a:active {
 
   .container {
     max-width: 90%;
-    margin: 1rem auto;
+    margin: 2rem auto;
   }
 
   #main .offerItem {
@@ -494,6 +507,10 @@ a:active {
 }
 
 @media (max-width: 720px) {
+  nav .logo img {
+    width: 7.5rem;
+  }
+
   header div {
     max-width: 75%;
   }
@@ -503,14 +520,32 @@ a:active {
     grid-gap: 2rem;
   }
 
-  #apply main .container.container-wider {
-    flex-direction: column
+  #apply main .container {
+    flex-direction: column;
   }
 
   #apply main .container .grid {
     margin-top: 2rem;
     grid-template-columns: none;
     grid-row-gap: 2.5rem;
+  }
+
+  #apply main #calltoaction {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%, 0);
+    background: linear-gradient(to bottom,transparent,rgba(20,20,20,.8) 50%,rgba(20,20,20,.9) 100%);
+  }
+
+  #apply main #calltoaction button {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  #apply main .grid .card {
+    margin: 0;
   }
 }
 
