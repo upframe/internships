@@ -39,7 +39,7 @@ class Apply extends PureComponent {
   }
 
   componentDidMount() {
-    APIservice.getAllOffers().then(data => {
+    APIservice.getAllOffers().then((data) => {
       this.setState({
         currentInternship: this.getCurrentJob(data.records)
       })

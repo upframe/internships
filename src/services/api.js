@@ -17,7 +17,7 @@ export class APIservice {
 
   async getAllOffers(table = 'Main') {
     let options = this.defaultOptions()
-    return (await fetch(this.links.baseURL + table, options).then(res => res.json()));
+    return (await fetch(this.links.baseURL + table, options).then((res) => res.json()));
   }
 }
 

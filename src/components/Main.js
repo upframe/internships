@@ -14,8 +14,8 @@ export default class Main extends Component {
   componentDidMount () {
     document.title = 'Startup Mojo'
     
-    APIservice.getAllOffers().then(data => {
-      let filteredOffers = data.records.filter(element => this.isComplete(element))
+    APIservice.getAllOffers().then((data) => {
+      let filteredOffers = data.records.filter((element) => this.isComplete(element))
       this.setState({ offers: filteredOffers })
     })
   }
@@ -59,7 +59,7 @@ export default class Main extends Component {
         </header>
         <div className="container">
           <div className="offerList">
-            {this.state.offers.map(offer => {
+            {this.state.offers.map((offer) => {
               return (
                 <Link to={this.createLink(offer.fields.Company, offer.fields.Title)} style={{ textDecoration: 'none' }} key={offer.id}>
                   <div className="offerItem" data-id={offer.id} key={offer.id}>
