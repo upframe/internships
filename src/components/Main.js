@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import APIservice from '../services/api.js';
+
+import Navbar from './Navbar';
 
 export default class Main extends Component {
   constructor(props) {
@@ -39,17 +41,8 @@ export default class Main extends Component {
 
   render() {
     return(
-      <div>
-        <nav>
-          <div className="wrapper">
-            <img className="logo" src="/media/logo.svg" alt="Upframe"></img>
-            <ul>
-              <li>
-                Internships
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <div id="main">
+        <Navbar />
         <header>
           <div>
             <h1>Startup Mojo</h1>

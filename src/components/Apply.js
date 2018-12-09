@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
+
 import APIservice from '../services/api.js';
+
+import Navbar from './Navbar';
 
 class Apply extends PureComponent {
 
@@ -61,47 +64,66 @@ class Apply extends PureComponent {
       )
     } else {
       return (
-        <div>
-          <nav>
-            <div className="wrapper">
-              <img className="logo" src="/media/logo.svg" alt="Upframe" onClick={this.goHome}/>
-              <ul>
-                <li>
-                  Internships
-              </li>
+        <div id="apply">
+          <Navbar />
+
+          <header>
+            <h1>{this.state.currentInternship.Title} {this.state.currentInternship.Location}</h1>
+          </header>
+
+          <main>
+            <div className="container container-wider">
+              <ul className="breadcrumbs">
+                <li className="item">INTERNSHIPS</li>
+                <li>></li>
+                <li className="item">{this.state.currentInternship.Company.toUpperCase()}</li>
+                <li>></li>
+                <li className="item color-primary bold">{this.state.currentInternship.Title.toUpperCase()}</li>
               </ul>
-            </div>
-          </nav>
-          <div className="header-smaller">
-            <div>
-              <h1>{this.state.currentInternship.Title} {this.state.currentInternship.Location}</h1>
-            </div>
-          </div>
-          <div className="container">
-            INTERNSHIPS  >  {this.state.currentInternship.Company.toUpperCase()}  >  {this.state.currentInternship.Title.toUpperCase()}
-            <div>
-              <h1>
-                Job description
-              </h1>
-              <div>
-                {this.state.currentInternship.JobDescription}
+
+              <div className="grid">
+                <div>
+                  <div>
+                    <h1 className="title-2 normal color-primary">Job description</h1>
+                    <div className="color-darkgray">
+                      {/*this.state.currentInternship.JobDescription */}
+                      <p>The Uniplaces Ambassador Program is a community of hardworking, creative and motivated students who
+                        live to make a difference. It is an opportunity to discover the capabilities of each and create a personal
+                        impact in one of the most recognized startups in Europe.</p>
+
+                      <p>We are looking for university students to enter the program in Spain. You are a sociable person, who knows
+                        the whole campus and, most importantly, do you have sales skills? If you have answered yes to all of the 
+                        above questions, you would be the best Operations Ambassador!</p>
+                      
+                      <p>Ser Operations Ambassador is the perfect freelance work for a student. You decide your schedule and make
+                        your piggy bank. All up to you! Your main task is to help international students find a home in a new city.
+                        Contact them, help them find accommodation, follow up on the booking process and, if necessary, answer 
+                        their questions. You may even make friends along the way!</p>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="title-2 normal color-primary">Main requirements</h1>
+                    <div className="color-darkgray">
+                      {/*this.state.currentInternship.MainRequirements*/}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-column">
+                  <button className="btn btn-primary" onClick={this.apply}>Apply now</button>
+                  <div className="card color-darkgray">
+                    <div className="flex flex-column items-center">
+                      <img className="image round" id="ambassador-profile" src={this.state.currentInternship.AmbassadorPic[0].thumbnails.large.url} alt='Ambassador'></img>
+                      <p>{this.state.currentInternship.AmbassadorBio}</p>
+                    </div>
+                      <div className="border-all">
+                        <a href={'https://www.twitter.com/' + this.state.currentInternship.AmbassadorTwitter}>{this.state.currentInternship.AmbassadorTwitter}</a>
+                      </div>
+                  </div>
+                </div>
               </div>
-              <h1>
-                Main requirements
-              </h1>
-              <div>
-                {this.state.currentInternship.MainRequirements}
-              </div>
-              <button onClick={this.apply}>Apply now</button>
-              {/* Ambassador Begin */}
-              <div>
-                <img src={this.state.currentInternship.AmbassadorPic[0].thumbnails.large.url} alt='Ambassador'></img>
-                <p>{this.state.currentInternship.AmbassadorBio}</p>
-                <a href={'https://www.twitter.com/' + this.state.currentInternship.AmbassadorTwitter}>{this.state.currentInternship.AmbassadorTwitter}</a>
-              </div>
-              {/* End of Ambassador */}
             </div>
-          </div>
+          </main>
         </div>
       )
     }
