@@ -68,7 +68,9 @@ class Apply extends PureComponent {
           <Navbar />
 
           <header>
-            <h1>{this.state.currentInternship.Title} {this.state.currentInternship.Location}</h1>
+            <div>
+              <h1>{this.state.currentInternship.Title} {this.state.currentInternship.Location}</h1>
+            </div>
           </header>
 
           <main>
@@ -86,25 +88,13 @@ class Apply extends PureComponent {
                   <div>
                     <h1 className="title-2 normal color-primary">Job description</h1>
                     <div className="color-darkgray">
-                      {/*this.state.currentInternship.JobDescription */}
-                      <p>The Uniplaces Ambassador Program is a community of hardworking, creative and motivated students who
-                        live to make a difference. It is an opportunity to discover the capabilities of each and create a personal
-                        impact in one of the most recognized startups in Europe.</p>
-
-                      <p>We are looking for university students to enter the program in Spain. You are a sociable person, who knows
-                        the whole campus and, most importantly, do you have sales skills? If you have answered yes to all of the 
-                        above questions, you would be the best Operations Ambassador!</p>
-                      
-                      <p>Ser Operations Ambassador is the perfect freelance work for a student. You decide your schedule and make
-                        your piggy bank. All up to you! Your main task is to help international students find a home in a new city.
-                        Contact them, help them find accommodation, follow up on the booking process and, if necessary, answer 
-                        their questions. You may even make friends along the way!</p>
+                      {this.state.currentInternship.JobDescription}
                     </div>
                   </div>
                   <div>
                     <h1 className="title-2 normal color-primary">Main requirements</h1>
                     <div className="color-darkgray">
-                      {/*this.state.currentInternship.MainRequirements*/}
+                      {this.state.currentInternship.MainRequirements}
                     </div>
                   </div>
                 </div>
@@ -117,7 +107,7 @@ class Apply extends PureComponent {
                       <p>{this.state.currentInternship.AmbassadorBio}</p>
                     </div>
                       <div className="border-all">
-                        <a href={'https://www.twitter.com/' + this.state.currentInternship.AmbassadorTwitter}>{this.state.currentInternship.AmbassadorTwitter}</a>
+                        <a href={'https://www.twitter.com/' + this.state.currentInternship.AmbassadorTwitter} target="_blank" rel="noopener noreferrer">{this.state.currentInternship.AmbassadorTwitter}</a>
                       </div>
                   </div>
                 </div>

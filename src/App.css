@@ -199,6 +199,7 @@ input:focus {
 .breadcrumbs {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   color: var(--darkgray);
@@ -427,10 +428,10 @@ a:active {
   font-size: 3rem;
 }
 
-#apply main .container > div {
+#apply main .container .grid {
   margin-top: 2rem;
   grid-template-columns: 2.7fr 1fr;
-  grid-column-gap: 7.5rem;
+  grid-column-gap: 8rem;
 }
 
 #apply .card {
@@ -471,14 +472,19 @@ a:active {
 
   .container {
     max-width: 90%;
+    margin: 1rem auto;
   }
 
-  .offerItem {
+  #main .offerItem {
     padding: 1.5rem 2rem;
   }
 
-  .offerItem .mainInfo {
+  #main .offerItem .mainInfo {
     margin: 0 1rem 0 0;
+  }
+
+  #apply main .container .grid {
+    grid-column-gap: 2rem;
   }
 
   .application form div#mc_embed_signup_scroll {
@@ -495,9 +501,19 @@ a:active {
     max-width: 75%;
   }
 
-  .offerList {
+  #main .offerList {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+  }
+
+  #apply main .container.container-wider {
+    flex-direction: column
+  }
+
+  #apply main .container .grid {
+    margin-top: 2rem;
+    grid-template-columns: none;
+    grid-row-gap: 2.5rem;
   }
 }
 
@@ -514,11 +530,15 @@ a:active {
 }
 
 @media (max-width: 350px) {
-  .offerItem {
+  header div {
+    margin-bottom: 1rem;
+  }
+
+  #main .offerItem {
     flex-direction: column;
   }
 
-  .offerItem .mainInfo {
+  #main .offerItem .mainInfo {
     margin: 0 0 1rem 0;
   }
 }
