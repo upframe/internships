@@ -427,7 +427,7 @@ a:active {
 
 #apply main .container .grid {
   margin-top: 2rem;
-  grid-template-columns: 2.7fr 1fr;
+  grid-template-columns: "2.7fr 1fr";
   grid-column-gap: 8rem;
 }
 
