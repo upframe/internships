@@ -5,9 +5,9 @@ export default class Subscribe extends PureComponent {
   render() {
     return(
       <div className="container">
-        <div className="application">
+        <div className="subscribe">
           <div className="title">
-            <h1>Oportunidades do caralh* <span role="img" aria-label="high-five">🙌</span></h1>
+            <h1>Start Your Career Here <span role="img" aria-label="high-five">🙌</span></h1>
           </div>
           <div className="content">
             <p>Na Upframe somos frequentemente abordados por startups de pequena e média dimensão à procura de estudantes que os possam ajudar. Por outro lado é normal encontrar pessoal como tu à procura de experiência real e que se pretende atirar para um ambiente mais inovador e empreendedor por saber que em vários aspetos a universidade ficou presa no século 19 e que o canudo por si só já não é tudo. Mereces melhor.</p>

@@ -398,49 +398,49 @@ header p {
 /* * * * * * * * *
  * SUBSCRIBE PAGE
  * * * * * * * * */
-.application {
+.subscribe {
   max-width: 65%;
   margin: 0 auto;
 }
 
-.application .title {
+.subscribe .title {
   text-align: center;
 }
 
-.application .title h1 {
+.subscribe .title h1 {
   color: #29358c;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
-.application .content p {
+.subscribe .content p {
   color: #586782;
 }
 
-.application form {
+.subscribe form {
   display: flex;
   justify-content: center;
 }
 
-.application form div#mc_embed_signup_scroll {
+.subscribe form div#mc_embed_signup_scroll {
   display: flex;
 }
 
-.application .mc-field-group {
+.subscribe .mc-field-group {
   margin: 1rem;
 }
 
-.application .mc-field-group input {
+.subscribe .mc-field-group input {
   width: 14rem;
   -webkit-appearance: none;
 }
 
-.application div.clear {
+.subscribe div.clear {
   display: flex;
   align-items: center;
 }
 
-.application input[type="submit"] {
+.subscribe input[type="submit"] {
   -webkit-appearance: none;
   background: #ff004b;
   color: var(--text-primary);
@@ -497,11 +497,11 @@ header p {
     grid-column-gap: 2rem;
   }
 
-  .application form div#mc_embed_signup_scroll {
+  .subscribe form div#mc_embed_signup_scroll {
     flex-direction: column;
   }
 
-  .application .mc-field-group {
+  .subscribe .mc-field-group {
     margin: 0;
   }
 }
@@ -555,7 +555,7 @@ header p {
     max-width: 90%;
   }
 
-  .application {
+  .subscribe {
     min-width: 100%;
     max-width: 100%;
     margin: 0;

@@ -5,7 +5,7 @@ export default class Companies extends PureComponent {
   render() {
     return(
       <div className="container">
-        <div className="application">
+        <div className="subscribe">
           <div className="title">
             <h1>Startups candidatam-se aqui <span role="img" aria-label="smilling face with heart eyes">😍</span></h1>
           </div>
