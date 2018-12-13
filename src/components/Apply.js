@@ -42,6 +42,7 @@ class Apply extends PureComponent {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     APIservice.getAllOffers().then((data) => {
       this.setState({
         currentInternship: this.getCurrentJob(data.records)
