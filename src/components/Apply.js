@@ -63,6 +63,7 @@ class Apply extends PureComponent {
         <Redirect to='/404' />
       )
     } else {
+      let startupFilterURL = '/?company=' + this.state.currentInternship.Company;
       return (
         <div id="apply">
           <Navbar />
@@ -76,11 +77,9 @@ class Apply extends PureComponent {
           <main>
             <div className="container container-wider">
               <ul className="breadcrumbs">
-                <li className="item">INTERNSHIPS</li>
-                <li>></li>
-                <li className="item">{this.state.currentInternship.Company.toUpperCase()}</li>
-                <li>></li>
-                <li className="item color-primary bold">{this.state.currentInternship.Title.toUpperCase()}</li>
+                <a href="/" className="item"><li>INTERNSHIPS</li></a>
+                <a href={startupFilterURL} className="item"><li className="item">{this.state.currentInternship.Company.toUpperCase()}</li></a>
+                <a href="." className="item active bold"><li>{this.state.currentInternship.Title.toUpperCase()}</li></a>
               </ul>
 
               <div className="grid">
