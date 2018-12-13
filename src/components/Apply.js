@@ -87,13 +87,13 @@ class Apply extends PureComponent {
                 <div>
                   <div>
                     <h1 className="title-2 normal color-primary">Job description</h1>
-                    <div className="color-darkgray">
+                    <div className="paragraph color-darkgray">
                       {this.state.currentInternship.JobDescription}
                     </div>
                   </div>
                   <div>
                     <h1 className="title-2 normal color-primary">Main requirements</h1>
-                    <div className="color-darkgray">
+                    <div className="paragraph color-darkgray">
                       {this.state.currentInternship.MainRequirements}
                     </div>
                   </div>

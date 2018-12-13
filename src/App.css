@@ -210,6 +210,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   color: var(--darkgray);
+  font-size: 0.9rem;
   letter-spacing: 0.01785rem;
   list-style: none;
   padding: 0;
@@ -391,6 +392,14 @@ header p {
   margin-top: 2rem;
   grid-template-columns: 2.7fr 1fr;
   grid-column-gap: 8rem;
+}
+
+#apply main .grid h1 {
+  margin-bottom: 1rem;
+}
+
+#apply main .grid .paragraph {
+  margin-bottom: 2rem;
 }
 
 #apply #calltoaction button {
