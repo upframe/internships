@@ -239,6 +239,52 @@ input:focus {
   color: var(--primary);
 }
 
+/* HAMBURGER */
+
+.hamburger {
+  background-color: #fff;
+  width: 1.5rem;
+  height: 0.25rem;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  display: block;
+  position: relative;
+  background-color: #fff;
+  width: 1.5rem;
+  height: 0.25rem;
+  cursor: pointer;
+  transition: 0.25s ease all;
+}
+
+.hamburger:before {
+  bottom: 0.5rem;
+}
+
+.hamburger:after {
+  top: 0.25rem;
+}
+
+.hamburger.open {
+  background: rgba(0,0,0,0);
+}
+
+.hamburger.open:before {
+  visibility: visible;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.hamburger.open:after {
+  visibility: visible;
+  top: -0.25rem;
+  transform: rotate(45deg);
+}
+
 /* IMAGE */
 .image {
   max-width: 20rem;
@@ -265,9 +311,17 @@ input:focus {
 }
 
 nav {
+  position: fixed;
+  width: 100%;
   background-color: var(--third);
   color: var(--text-primary);
   z-index: 0;
+  transition: .25s ease-in-out all;
+  z-index: 1;
+}
+
+nav.active {
+  background-color: var(--primary);
 }
 
 nav .wrapper {
@@ -284,6 +338,10 @@ nav .logo img {
   width: 10rem;
 }
 
+nav .hamburger {
+  display: none;
+}
+
 nav ul {
   display: flex;
   align-items: center;
@@ -292,13 +350,19 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
+nav .wrapper ul li {
+  color: var(--text-primary);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   font-weight: 400;
 }
 
-nav ul li::after {
+nav:not(.menu-open) .wrapper ul a:not(:last-of-type) li {
+  margin-right: 1.5rem;
+}
+
+nav .wrapper ul li::after {
   display: block;
   position: relative;
   content: "";
@@ -309,6 +373,10 @@ nav ul li::after {
   margin: 0.25rem auto 0 auto;
 }
 
+nav.active .wrapper ul li::after {
+  background-color: var(--third);
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -316,6 +384,7 @@ header {
   min-height: 18rem;
   background-color: var(--third);
   color: var(--text-primary);
+  padding-top: 5rem;
 }
 
 header div {
@@ -481,7 +550,7 @@ header p {
 
 @media (max-width: 970px) {
   nav .wrapper {
-    max-width: 95%;
+    max-width: 90%;
   }
 
   header {
@@ -529,6 +598,43 @@ header p {
 @media (max-width: 720px) {
   nav .logo img {
     width: 7.5rem;
+  }
+
+  nav .hamburger {
+    display: block;
+  }
+
+  nav.menu-open {
+    animation: navSlideDown .5s ease-in-out forwards;
+  }
+
+  nav:not(.menu-open) .wrapper ul {
+    display: none;
+    opacity: 0;
+  }
+
+  nav.menu-open .wrapper ul {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    flex-direction: column;
+    top: 50%;
+    left: 0;
+    transform: translateY(-75%);
+    color: var(--text-primary);
+    letter-spacing: 0.25rem;
+    animation: showMenuItems .1s ease-in-out forwards 0.25s;
+  }
+
+  nav .wrapper ul li {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    margin-bottom: 3rem;
+  }
+
+  nav .wrapper ul li:after {
+    display: none;
   }
 
   header div {
@@ -593,5 +699,27 @@ header p {
 
   #main .offerItem .mainInfo {
     margin: 0 0 1rem 0;
+  }
+}
+
+
+/* Animations */
+@keyframes navSlideDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+    background-color: var(--primary);
+  }
+}
+
+@keyframes showMenuItems {
+  0% {
+    opacity: 0;
+  }
+  100% {
+
+    opacity: 1;
   }
 }
