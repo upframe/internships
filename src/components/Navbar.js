@@ -13,7 +13,7 @@ function hamburgerClick() {
     navbar.classList.add('menu-close')
 
     // remove classes after animations are done
-    setTimeout(() =>{
+    setTimeout(() => {
       navbar.classList.remove('menu-open')
       navbar.classList.remove('menu-close')
     }, 500);
@@ -28,18 +28,20 @@ function hamburgerClick() {
 }
 
 function navbarScroll() {
-  document.addEventListener('scroll', (ev) => {
-    let nav = document.querySelector('nav')
-    if(window.scrollY && !nav.classList.contains('active')) {
-      nav.classList.add('active')
-    } else if(!window.scrollY && nav.classList.contains('active')) {
-      nav.classList.remove('active')
-    }
-  })
+  let nav = document.querySelector('nav')
+  if (window.scrollY && !nav.classList.contains('active')) {
+    nav.classList.add('active')
+  } else if (!window.scrollY && nav.classList.contains('active')) {
+    nav.classList.remove('active')
+  }
+}
+
+function addScrollListener() {
+  document.addEventListener('scroll', navbarScroll)
 }
 
 function Navbar(props) {
-  navbarScroll()
+  addScrollListener()
   
   return (
     <nav>
