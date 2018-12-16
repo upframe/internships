@@ -6,11 +6,23 @@ function hamburgerClick() {
     hamburger = document.querySelector('.hamburger')
 
   if(hamburger.classList.contains('open')) {
+    // close hamburger
     hamburger.classList.remove('open')
-    navbar.classList.remove('menu-open')
+
+    // start close animation
+    navbar.classList.add('menu-close')
+
+    // remove classes after animations are done
+    setTimeout(() =>{
+      navbar.classList.remove('menu-open')
+      navbar.classList.remove('menu-close')
+    }, 500);
   }
   else {
+    // open hamburger
     hamburger.classList.add('open')
+
+    // open menu
     navbar.classList.add('menu-open')
   }
 }
