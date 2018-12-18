@@ -600,57 +600,6 @@ header p {
     width: 7.5rem;
   }
 
-  nav .hamburger {
-    display: block;
-  }
-
-  nav .wrapper ul {
-    position: absolute;
-    width: 100%;
-    flex-direction: column;
-    top: -100%;
-    left: 0;
-    color: var(--text-primary);
-    letter-spacing: 0.25rem;
-    transform: translateY(-75%);
-    transition: 2s ease-in-out all;
-  }
-
-  /* OPEN ANIMATION */
-
-  /* slide down */
-  nav.menu-open {
-    animation: navSlideDown .5s ease-in-out forwards;
-  }
-
-  /* Fade in text on open */
-  nav.menu-open .wrapper ul {
-    animation: showMenuItems .5s ease-in-out forwards;
-  }
-  
-
-  /* CLOSE ANIMATION */
-  nav.menu-open.menu-close {
-    animation: navSlideUp .5s ease-in-out forwards;
-  }
-  
-  nav.menu-open.menu-close .wrapper ul {
-    animation: hideMenuItems .5s ease-in-out forwards;
-    transition: .25s ease all;
-  }
-
-
-  nav .wrapper ul li {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.125rem;
-    margin-bottom: 3rem;
-  }
-
-  nav .wrapper ul li:after {
-    display: none;
-  }
-
   header div {
     max-width: 75%;
   }
@@ -687,6 +636,59 @@ header p {
 
   #apply main .grid .card {
     margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  nav .hamburger {
+    display: block;
+  }
+
+  nav .wrapper ul {
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    top: -100%;
+    left: 0;
+    color: var(--text-primary);
+    letter-spacing: 0.25rem;
+    transform: translateY(-100%);
+  }
+
+  /* OPEN ANIMATION */
+
+  /* Slide down */
+  nav.menu-open {
+    animation: navSlideDown .5s ease-in-out forwards;
+  }
+
+  /* Fade in text on open */
+  nav.menu-open .wrapper ul {
+    animation: showMenuItems .5s ease-in-out forwards;
+  }
+  
+  /* CLOSE ANIMATION */
+  
+  /* Slide up */
+  nav.menu-open.menu-close {
+    animation: navSlideUp .5s ease-in-out forwards;
+  }
+  
+  /* Fade out text on close */
+  nav.menu-open.menu-close .wrapper ul {
+    animation: hideMenuItems .5s ease-in-out forwards;
+    transition: .25s ease all;
+  }
+
+  nav .wrapper ul li {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    margin-bottom: 3rem;
+  }
+
+  nav .wrapper ul li:after {
+    display: none;
   }
 }
 
@@ -737,7 +739,7 @@ header p {
   }
   100% {
     opacity: 1;
-    top: 50%;
+    top: 75%;
   }
 }
 
@@ -755,7 +757,7 @@ header p {
 @keyframes hideMenuItems {
   0% {
     opacity: 1;
-    top: 50%;
+    top: 75%;
   }
   100% {
     opacity: 0;
