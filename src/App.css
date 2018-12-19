@@ -311,17 +311,12 @@ input:focus {
 }
 
 nav {
-  position: fixed;
   width: 100%;
   background-color: var(--third);
   color: var(--text-primary);
   z-index: 0;
   transition: .25s ease-in-out all;
   z-index: 1;
-}
-
-nav.active {
-  background-color: var(--primary);
 }
 
 nav .wrapper {
@@ -366,15 +361,14 @@ nav .wrapper ul li::after {
   display: block;
   position: relative;
   content: "";
-  background-color: var(--primary);
   height: 0.15rem;
   width: 80%;
   border-radius: 2rem;
   margin: 0.25rem auto 0 auto;
 }
 
-nav.active .wrapper ul li::after {
-  background-color: var(--third);
+nav .wrapper ul li.active::after {
+  background-color: var(--primary);
 }
 
 header {
@@ -384,7 +378,6 @@ header {
   min-height: 18rem;
   background-color: var(--third);
   color: var(--text-primary);
-  padding-top: 5rem;
 }
 
 header div {
@@ -467,7 +460,7 @@ header p {
   margin-bottom: 1rem;
 }
 
-#apply main .grid .paragraph {
+#apply main .grid .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
@@ -724,10 +717,9 @@ header p {
 /* Menu open */
 @keyframes navSlideDown {
   0% {
-    height: 0;
   }
   100% {
-    height: 100%;
+    height: 100vh;
     background-color: var(--primary);
   }
 }
