@@ -27,22 +27,7 @@ function hamburgerClick() {
   }
 }
 
-function navbarScroll() {
-  let nav = document.querySelector('nav')
-  if (window.scrollY && !nav.classList.contains('active')) {
-    nav.classList.add('active')
-  } else if (!window.scrollY && nav.classList.contains('active')) {
-    nav.classList.remove('active')
-  }
-}
-
-function addScrollListener() {
-  document.addEventListener('scroll', navbarScroll)
-}
-
-function Navbar(props) {
-  addScrollListener()
-  
+function Navbar(props) {  
   return (
     <nav>
       <div className="wrapper">
@@ -55,7 +40,7 @@ function Navbar(props) {
 
         <ul>
           <a href="."><li>People</li></a>
-          <a href="/"><li>Internships</li></a>
+          <a href="/"><li className="active">Internships</li></a>
           <a href="."><li>Contact</li></a>
         </ul>
       </div>
