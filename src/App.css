@@ -312,6 +312,7 @@ input:focus {
 
 nav {
   width: 100%;
+  height: 5rem;
   background-color: var(--third);
   color: var(--text-primary);
   z-index: 0;
@@ -658,7 +659,8 @@ header p {
 
   /* Slide down */
   nav.menu-open {
-    animation: navSlideDown .5s ease-in-out forwards;
+    height: 100vh;
+    background-color: var(--primary);
   }
 
   /* Fade in text on open */
@@ -670,13 +672,13 @@ header p {
   
   /* Slide up */
   nav.menu-open.menu-close {
-    animation: navSlideUp .5s ease-in-out forwards;
+    background-color: var(--third);
+    height: 5rem;
   }
   
   /* Fade out text on close */
   nav.menu-open.menu-close .wrapper ul {
     animation: hideMenuItems .5s ease-in-out forwards;
-    transition: .25s ease all;
   }
 
   nav .wrapper ul li {
