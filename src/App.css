@@ -604,6 +604,7 @@ header p {
 
   #apply main .container {
     flex-direction: column;
+    padding-bottom: 3.5rem;
   }
 
   #apply main .container .grid {
@@ -620,11 +621,16 @@ header p {
     left: 50%;
     transform:translate(-50%, 0);
     background: linear-gradient(to bottom,transparent,rgba(20,20,20,.8) 75%,rgba(20,20,20,.9) 100%);
+    transition: .25s ease-in-out all;
   }
 
   #apply main #calltoaction button {
     width: 90%;
     margin: 1rem auto;
+  }
+
+  #apply main #calltoaction.hide {
+    bottom: -100%;
   }
 
   #apply main .grid .card {
@@ -717,6 +723,7 @@ header p {
 /* Menu open */
 @keyframes navSlideDown {
   0% {
+    height: 5rem;
   }
   100% {
     height: 100vh;
@@ -739,10 +746,10 @@ header p {
 
 @keyframes navSlideUp {
   0% {
-    height: 100%;
+    height: 100vh;
   }
   100% {
-    height: 0;
+    height: 5rem;
   }
 }
 
@@ -756,4 +763,3 @@ header p {
     top: -100%;
   }
 }
-

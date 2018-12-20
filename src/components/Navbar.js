@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 
 function hamburgerClick() {
   let navbar = document.querySelector('nav'),
-    hamburger = document.querySelector('.hamburger')
+    hamburger = document.querySelector('.hamburger'),
+    calltoaction = document.querySelector('#calltoaction');
 
   if(hamburger.classList.contains('open')) {
     // close hamburger
     hamburger.classList.remove('open')
-
-    // start close animation
+    // start menu close animation
     navbar.classList.add('menu-close')
+    // show call to action
+    calltoaction.classList.remove('hide');
 
     // remove classes after animations are done
     setTimeout(() => {
@@ -21,9 +23,10 @@ function hamburgerClick() {
   else {
     // open hamburger
     hamburger.classList.add('open')
-
-    // open menu
+    // start menu open animation
     navbar.classList.add('menu-open')
+    // hide call to action
+    calltoaction.classList.add('hide')
   }
 }
 
