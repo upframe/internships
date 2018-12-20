@@ -478,6 +478,11 @@ header p {
   max-width: 6rem;
 }
 
+ul {
+  -webkit-padding-start: 1em;
+  padding-inline-start: 1em;
+}
+
 /* * * * * * * * *
  * SUBSCRIBE PAGE
  * * * * * * * * */

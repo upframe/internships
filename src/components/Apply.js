@@ -58,6 +58,16 @@ class Apply extends PureComponent {
     this.props.history.push('/');
   }
 
+  displayMainRequirements = () => {
+    this.state.currentInternship.MainRequirements.split('\n').map((element) => {
+      return (
+        <div className="paragraph color-darkgray">
+          {element}
+        </div>
+      )
+    })
+  }
+
   render() {
     if (this.state.currentInternship === undefined) {
       return (
@@ -87,15 +97,27 @@ class Apply extends PureComponent {
                 <div>
                   <div>
                     <h1 className="title-2 normal color-primary">Job description</h1>
-                    <div className="paragraph color-darkgray">
-                      {this.state.currentInternship.JobDescription}
-                    </div>
+                    <ul>
+                      {this.state.currentInternship.JobDescription.split('\n').map((element) => {
+                        return (
+                          <li className="color-darkgray">
+                            {element}
+                          </li>
+                        )
+                      })}
+                    </ul>
                   </div>
                   <div>
                     <h1 className="title-2 normal color-primary">Main requirements</h1>
-                    <div className="paragraph color-darkgray">
-                      {this.state.currentInternship.MainRequirements}
-                    </div>
+                    <ul>
+                      {this.state.currentInternship.MainRequirements.split('\n').map((element) => {
+                        return (
+                          <li className="color-darkgray">
+                            {element}
+                          </li>
+                        )
+                      })}
+                    </ul>
                   </div>
                 </div>
 
