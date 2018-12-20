@@ -12,7 +12,7 @@ function hamburgerClick() {
     // start menu close animation
     navbar.classList.add('menu-close')
     // show call to action
-    calltoaction.classList.remove('hide');
+    if(calltoaction) calltoaction.classList.remove('hide');
 
     // remove classes after animations are done
     setTimeout(() => {
@@ -26,7 +26,7 @@ function hamburgerClick() {
     // start menu open animation
     navbar.classList.add('menu-open')
     // hide call to action
-    calltoaction.classList.add('hide')
+    if(calltoaction) calltoaction.classList.add('hide')
   }
 }
 
