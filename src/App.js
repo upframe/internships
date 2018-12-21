@@ -12,7 +12,6 @@ import ErrorPage from './components/ErrorPage';
 export default class App extends Component {
 
   render() {
-    console.log(process.env.REACT_APP_AIRTABLEKEY)
     return (
       <Router>
         <div className="app">
