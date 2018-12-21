@@ -4,30 +4,33 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build --no-prerender --template public/index.html",
-    "serve": "preact build --no-prerender --template public/index.html && preact serve",
-    "dev": "preact watch --no-prerender --template public/index.html",
+    "start": "npm run -s build && serve build",
+    "build": "preact build --template public/index.html --no-prerender",
+    "dev": "preact watch --template public/index.html",
+    "deploy": "now build",
     "lint": "eslint src"
   },
   "eslintConfig": {
-    "extends": "eslint-config-synacor"
+    "extends": "eslint-config-developit",
+    "rules": {
+      "semi": [
+        2,
+        false
+      ]
+    }
   },
-  "eslintIgnore": [
-    "build/*"
-  ],
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
     "eslint": "^4.5.0",
-    "eslint-config-synacor": "^1.1.0",
-    "if-env": "^1.0.0",
-    "preact-cli": "^2.0.0"
+    "eslint-config-developit": "^1.1.1",
+    "preact-cli": "^3.0.0-next.14",
+    "preact-cli-plugin-env-vars": "^1.2.1",
+    "preact-cli-plugin-fast-async": "^1.0.1"
   },
   "dependencies": {
-    "preact": "^8.2.1",
-    "preact-cli-plugin-env-vars": "^1.2.1",
-    "preact-cli-plugin-fast-async": "^1.0.1",
-    "preact-compat": "^3.17.0",
-    "react-router-dom": "^4.3.1"
+    "critters-webpack-plugin": "^2.1.1",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "serve": "^10.1.1"
   }
 }

@@ -1,4 +1,4 @@
-import { h, render, Component } from 'preact';
+import { Component } from 'preact';
 
 export default class Companies extends Component {
   
