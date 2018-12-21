@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npm run -s build && preact serve",
+    "start": "npm run -s build && serve build",
     "build": "preact build --template public/index.html",
     "dev": "preact watch --template public/index.html",
     "lint": "eslint src"
@@ -29,6 +29,6 @@
   "dependencies": {
     "preact": "^8.4.2",
     "preact-compat": "^3.18.4",
-    "react-router-dom": "^4.3.1"
+    "serve": "^10.1.1"
   }
 }

@@ -3,8 +3,8 @@ import { route } from 'preact-router';
 
 import APIservice from '../services/api.js';
 
-import Navbar from '../components/Navbar';
-import ErrorPage from '../components/ErrorPage';
+import Navbar from './Navbar';
+import ErrorPage from './ErrorPage';
 
 export default class Apply extends Component {
 

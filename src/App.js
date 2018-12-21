@@ -5,10 +5,9 @@ import './App.css';
 
 import Main from './components/Main';
 import Subscribe from './components/Subscribe';
+import Apply from './components/Apply';
 import Companies from './components/Companies';
 import ErrorPage from './components/ErrorPage';
-// Move any component into src/routes to automatically lazy-load (code split) it.
-import Apply from './routes/Apply';
 
 export default class App extends Component {
 
