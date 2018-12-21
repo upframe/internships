@@ -1,17 +1,18 @@
-import { h, render, Component } from 'preact';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Component } from 'preact';
+import { route } from 'preact-router';
 
 import APIservice from '../services/api.js';
 
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
+import ErrorPage from '../components/ErrorPage';
 
-class Apply extends Component {
+export default class Apply extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      company: window.location.pathname.split('/')[1],
-      position: window.location.pathname.split('/')[2],
+      company: props.company,
+      position: props.position,
       currentInternship: { //These are all the fields we need. Before we get them we display a placeholder
         Company: 'Loading',
         Title: 'Loading',
@@ -55,7 +56,7 @@ class Apply extends Component {
   }
 
   goHome = () => {
-    this.props.history.push('/');
+    route('/');
   }
 
   displayMainRequirements = () => {
@@ -71,7 +72,7 @@ class Apply extends Component {
   render() {
     if (this.state.currentInternship === undefined) {
       return (
-        <Redirect to='/404' />
+        <ErrorPage />
       )
     } else {
       let startupFilterURL = '/?company=' + this.state.currentInternship.Company;
@@ -143,5 +144,3 @@ class Apply extends Component {
     }
   }
 }
-
-export default withRouter(Apply)

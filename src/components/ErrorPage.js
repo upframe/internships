@@ -1,5 +1,4 @@
-import { h, render, Component } from 'preact';
-import { Link } from 'react-router-dom';
+import { Component } from 'preact';
 
 export default class ErrorPage extends Component {
 
@@ -7,7 +6,7 @@ export default class ErrorPage extends Component {
     return (
       <div>
         <h1>Oops that page doesn't exist!</h1>
-        <Link to='/'>Go home</Link>
+        <a href='/'>Go home</a>
       </div>
     )
   }
