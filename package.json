@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build --template public/index.html",
-    "serve": "preact build --template public/index.html && preact serve",
-    "dev": "preact watch --template public/index.html",
+    "build": "preact build --no-prerender --template public/index.html",
+    "serve": "preact build --no-prerender --template public/index.html && preact serve",
+    "dev": "preact watch --no-prerender --template public/index.html",
     "lint": "eslint src"
   },
   "eslintConfig": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "preact": "^8.2.1",
     "preact-cli-plugin-env-vars": "^1.2.1",
+    "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-compat": "^3.17.0",
     "react-router-dom": "^4.3.1"
   }
