@@ -1,26 +1,32 @@
 {
-  "name": "internships",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
-  },
+  "name": "simple",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build --template public/index.html",
+    "serve": "preact build --template public/index.html && preact serve",
+    "dev": "preact watch --template public/index.html",
+    "lint": "eslint src"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "eslint-config-synacor"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
+    "eslint": "^4.5.0",
+    "eslint-config-synacor": "^1.1.0",
+    "if-env": "^1.0.0",
+    "preact-cli": "^2.0.0"
+  },
+  "dependencies": {
+    "preact": "^8.2.1",
+    "preact-cli-plugin-env-vars": "^1.2.1",
+    "preact-compat": "^3.17.0",
+    "react-router-dom": "^4.3.1"
+  }
 }

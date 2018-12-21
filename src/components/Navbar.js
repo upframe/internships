@@ -1,4 +1,4 @@
-import React from 'react';
+import { h, render, Component } from 'preact';
 import { Link } from 'react-router-dom';
 
 function hamburgerClick() {
@@ -35,7 +35,7 @@ function Navbar(props) {
     <nav>
       <div className="wrapper">
         <Link to="/" className="logo">
-          <img src="/media/logo.svg" alt="Upframe"></img>
+          <img src="/logo.svg" alt="Upframe"></img>
         </Link>
 
         <div className="hamburger" onClick={hamburgerClick}>

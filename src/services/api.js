@@ -10,7 +10,7 @@ export class APIservice {
     return {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLEKEY}`
+        'Authorization': `Bearer ${process.env.PREACT_APP_AIRTABLEKEY}`
       }
     }
   }

@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
+import { h, render, Component } from 'preact';
 import { Redirect, withRouter } from 'react-router-dom';
 
 import APIservice from '../services/api.js';
 
 import Navbar from './Navbar';
 
-class Apply extends PureComponent {
+class Apply extends Component {
 
   constructor(props) {
     super(props)
@@ -35,7 +35,7 @@ class Apply extends PureComponent {
         if (records[i].fields.Company.toLowerCase().replace(/ /g, '-') === this.state.company && this.state.position === records[i].fields.Title.toLowerCase().replace(/ /g, '-')) {
           return records[i].fields
         }
-      } catch {
+      } catch (anything) {
         //Something is undefined, just next
       }
     }

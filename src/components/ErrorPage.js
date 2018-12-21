@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import { h, render, Component } from 'preact';
 import { Link } from 'react-router-dom';
 
-export default class ErrorPage extends PureComponent {
+export default class ErrorPage extends Component {
 
   render() {
     return (

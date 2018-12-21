@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { h, render, Component } from 'preact';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css';
@@ -9,9 +9,10 @@ import Apply from './components/Apply';
 import Companies from './components/Companies';
 import ErrorPage from './components/ErrorPage';
 
-export default class App extends PureComponent {
+export default class App extends Component {
 
   render() {
+    console.log(process.env.REACT_APP_AIRTABLEKEY)
     return (
       <Router>
         <div className="app">

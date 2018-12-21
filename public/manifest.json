@@ -1,15 +1,16 @@
 {
-  "short_name": "Internships",
-  "name": "Upframe internships",
+  "name": "simple",
+  "short_name": "simple",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#673ab8",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/assets/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#eb0041",
-  "background_color": "#ffffff"
+  ]
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { h, render, Component } from 'preact';
 import { Link } from 'react-router-dom';
 
 import APIservice from '../services/api.js';

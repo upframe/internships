@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import { h, render, Component } from 'preact';
 
-export default class Companies extends PureComponent {
+export default class Companies extends Component {
   
   render() {
     return(
