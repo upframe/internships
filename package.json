@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run -s build && serve build",
-    "build": "preact build --template public/index.html",
+    "build": "preact build --template public/index.html --no-prerender",
     "dev": "preact watch --template public/index.html",
     "deploy": "now build",
     "lint": "eslint src"
@@ -23,11 +23,12 @@
     "copy-webpack-plugin": "^4.6.0",
     "eslint": "^4.5.0",
     "eslint-config-developit": "^1.1.1",
-    "preact-cli": "^2.2.1",
+    "preact-cli": "^3.0.0-next.14",
     "preact-cli-plugin-env-vars": "^1.2.1",
     "preact-cli-plugin-fast-async": "^1.0.1"
   },
   "dependencies": {
+    "critters-webpack-plugin": "^2.1.1",
     "preact": "^8.4.2",
     "preact-compat": "^3.18.4",
     "serve": "^10.1.1"
