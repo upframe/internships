@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 function hamburgerClick() {
   let navbar = document.querySelector('nav'),
     hamburger = document.querySelector('.hamburger'),
@@ -34,9 +31,9 @@ function Navbar(props) {
   return (
     <nav>
       <div className="wrapper">
-        <Link to="/" className="logo">
-          <img src="/media/logo.svg" alt="Upframe"></img>
-        </Link>
+        <a href="/" className="logo">
+          <img src="/logo.svg" alt="Upframe"></img>
+        </a>
 
         <div className="hamburger" onClick={hamburgerClick}>
         </div>
