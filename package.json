@@ -1,13 +1,12 @@
 {
   "private": true,
-  "name": "simple",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "internships",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
   "scripts": {
     "start": "npm run -s build && serve build",
     "build": "preact build --template public/index.html --no-prerender",
-    "dev": "preact watch --template public/index.html",
-    "deploy": "now build",
+    "dev": "preact watch --template public/index.html --no-prerender",
     "lint": "eslint src"
   },
   "eslintConfig": {
