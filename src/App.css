@@ -9,7 +9,6 @@ body {
   src: url('/NotoSansDisplay-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
 }
 
 @font-face {
@@ -17,7 +16,6 @@ body {
   src: url('/NotoSansDisplay-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
-  font-display: optional;
 }
 
 @font-face {
@@ -25,7 +23,6 @@ body {
   src: url('/NotoSansDisplay-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: optional;
 }
 
 @font-face {
@@ -33,7 +30,6 @@ body {
   src: url('/NotoSansDisplay-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
-  font-display: optional;
 }
 
 :root {

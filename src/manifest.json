@@ -1,11 +1,11 @@
 {
-  "name": "simple",
-  "short_name": "simple",
+  "name": "Upframe Internships",
+  "short_name": "Internships",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "theme_color": "#eb0041",
   "icons": [
     {
       "src": "/icon.png",
