@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function hamburgerClick() {
   let navbar = document.querySelector('nav'),
-    hamburger = document.querySelector('.hamburger'),
+    hamburger = document.querySelector('.hamburger-container'),
     calltoaction = document.querySelector('#calltoaction');
 
   if(hamburger.classList.contains('open')) {
@@ -18,7 +18,7 @@ function hamburgerClick() {
     setTimeout(() => {
       navbar.classList.remove('menu-open')
       navbar.classList.remove('menu-close')
-    }, 500);
+    }, 250);
   }
   else {
     // open hamburger
@@ -38,7 +38,8 @@ function Navbar(props) {
           <img src="/media/logo.svg" alt="Upframe"></img>
         </Link>
 
-        <div className="hamburger" onClick={hamburgerClick}>
+        <div className="hamburger-container">
+          <span className="hamburger" onClick={hamburgerClick}></span>
         </div>
 
         <ul>
