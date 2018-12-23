@@ -1,17 +1,18 @@
-import React, { PureComponent } from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Component } from 'preact';
+import { route } from 'preact-router';
 
 import APIservice from '../services/api.js';
 
 import Navbar from './Navbar';
+import ErrorPage from './ErrorPage';
 
-class Apply extends PureComponent {
+export default class Apply extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      company: window.location.pathname.split('/')[1],
-      position: window.location.pathname.split('/')[2],
+      company: props.company,
+      position: props.position,
       currentInternship: { //These are all the fields we need. Before we get them we display a placeholder
         Company: 'Loading',
         Title: 'Loading',
@@ -35,7 +36,7 @@ class Apply extends PureComponent {
         if (records[i].fields.Company.toLowerCase().replace(/ /g, '-') === this.state.company && this.state.position === records[i].fields.Title.toLowerCase().replace(/ /g, '-')) {
           return records[i].fields
         }
-      } catch {
+      } catch (anything) {
         //Something is undefined, just next
       }
     }
@@ -55,7 +56,7 @@ class Apply extends PureComponent {
   }
 
   goHome = () => {
-    this.props.history.push('/');
+    route('/');
   }
 
   displayMainRequirements = () => {
@@ -71,7 +72,7 @@ class Apply extends PureComponent {
   render() {
     if (this.state.currentInternship === undefined) {
       return (
-        <Redirect to='/404' />
+        <ErrorPage />
       )
     } else {
       let startupFilterURL = '/?company=' + this.state.currentInternship.Company;
@@ -143,5 +144,3 @@ class Apply extends PureComponent {
     }
   }
 }
-
-export default withRouter(Apply)

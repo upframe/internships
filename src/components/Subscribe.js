@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import { Component } from 'preact';
 
-export default class Subscribe extends PureComponent {
+export default class Subscribe extends Component {
 
   render() {
     return(

@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Component } from 'preact';
+import { Router, Route } from 'preact-router'
 
 import './App.css';
 
@@ -9,22 +9,20 @@ import Apply from './components/Apply';
 import Companies from './components/Companies';
 import ErrorPage from './components/ErrorPage';
 
-export default class App extends PureComponent {
+export default class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="app">
-          <Switch>
-            <Route exact path='/' component={Main} />
-            <Route exact path='/subscribe' component={Subscribe} />
-            <Route exact path='/companies' component={Companies} />
-            <Route exact path='/404' component={ErrorPage} />
-            <Route path='/:company/:position' component={Apply} />
-            <Route path='/:random' component={ErrorPage} />
-          </Switch>
-        </div>
-      </Router>
+      <div className="app">
+        <Router>
+          <Route path='/' component={Main} />
+          <Route path='/subscribe' component={Subscribe} />
+          <Route path='/companies' component={Companies} />
+          <Route path='/404' component={ErrorPage} />
+          <Route path='/:company/:position' component={Apply} />
+          <Route default component={ErrorPage} />
+        </Router>
+      </div>
     );
   }
 }

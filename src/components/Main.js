@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Component } from 'preact';
 
 import APIservice from '../services/api.js';
 
 import Navbar from './Navbar';
 
 export default class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      offers: []
-    }
+  state = {
+    offers: []
   }
 
   componentDidMount () {
@@ -23,7 +19,7 @@ export default class Main extends Component {
   }
 
   //Verifica se uma oferta esta completa para nao crashar o site
-  isComplete = (offer) => {
+  isComplete (offer) {
     return offer.fields.Company !== undefined 
         && offer.fields.Title !== undefined 
         && offer.fields.Location !== undefined
@@ -35,8 +31,12 @@ export default class Main extends Component {
         && offer.fields.AmbassadorTwitter !== undefined
   }
 
-  createLink = (company, position) => {
-    return '/' + company.toLowerCase().replace(/ /g, '-') + '/' + position.toLowerCase().replace(/ /g, '-')
+  escape (value) {
+    return encodeURIComponent(value.toLowerCase().replace(/ /g, '-'))
+  }
+
+  createLink (company, position) {
+    return '/' + this.escape(company) + '/' + this.escape(position)
   }
 
   render() {
@@ -54,7 +54,7 @@ export default class Main extends Component {
           <div className="offerList">
             {this.state.offers.map((offer) => {
               return (
-                <Link to={this.createLink(offer.fields.Company, offer.fields.Title)} style={{ textDecoration: 'none' }} key={offer.id}>
+                <a href={this.createLink(offer.fields.Company, offer.fields.Title)} style={{ textDecoration: 'none' }} key={offer.id}>
                   <div className="offerItem" data-id={offer.id} key={offer.id}>
                     <div className="mainInfo">
                       <p id="company">{offer.fields.Company}</p>
@@ -64,7 +64,7 @@ export default class Main extends Component {
                       {offer.fields.Location}
                     </div>
                   </div>
-                </Link> 
+                </a> 
               )
             })}
           </div>
