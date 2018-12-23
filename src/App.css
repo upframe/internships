@@ -672,6 +672,7 @@ header p {
   nav.menu-open {
     height: 100vh;
     background-color: var(--primary);
+    position: fixed;
   }
 
   /* Fade in text on open */
