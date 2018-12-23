@@ -98,7 +98,7 @@ export default class Apply extends Component {
                 <div>
                   <div>
                     <h1 className="title-2 normal color-primary">Job description</h1>
-                    <ul>
+                    <ul className="description">
                       {this.state.currentInternship.JobDescription.split('\n').map((element) => {
                         return (
                           <li className="color-darkgray">
@@ -110,7 +110,7 @@ export default class Apply extends Component {
                   </div>
                   <div>
                     <h1 className="title-2 normal color-primary">Main requirements</h1>
-                    <ul>
+                    <ul className="requirements">
                       {this.state.currentInternship.MainRequirements.split('\n').map((element) => {
                         return (
                           <li className="color-darkgray">
