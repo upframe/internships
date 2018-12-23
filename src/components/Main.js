@@ -45,7 +45,7 @@ export default class Main extends Component {
         <Navbar />
         <header>
           <div>
-            <h1>Startup Mojo</h1>
+            <h1>Internships</h1>
             <p>Find your first student internship across the hottest startups
               in Europe and jumpstart your f*cking career.</p>
           </div>
