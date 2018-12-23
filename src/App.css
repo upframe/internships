@@ -478,9 +478,15 @@ header p {
   max-width: 6rem;
 }
 
-ul {
-  -webkit-padding-start: 1em;
-  padding-inline-start: 1em;
+#apply .description {
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+ 
+#apply .requirements {
+  -webkit-padding-start: 1.2em;
+  padding-inline-start: 1.2em;
 }
 
 /* * * * * * * * *
