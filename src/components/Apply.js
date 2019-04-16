@@ -16,7 +16,7 @@ export default class Apply extends Component {
       currentInternship: { //These are all the fields we need. Before we get them we display a placeholder
         Company: 'Loading',
         Title: 'Loading',
-        Location: 'Loading',
+        Location: '',
         AmbassadorBio: 'Loading',
         AmbassadorPic: [{
           thumbnails: {
@@ -25,7 +25,8 @@ export default class Apply extends Component {
         }],
         AmbassadorTwitter: 'Loading',
         MainRequirements: 'Loading',
-        JobDescription: 'Loading'
+        JobDescription: 'Loading',
+        ApplyUrl: ''
       }
     }
   }
@@ -52,7 +53,7 @@ export default class Apply extends Component {
   }
 
   apply = () => {
-    alert('Applying')
+    window.location = this.state.currentInternship.ApplyUrl
   }
 
   goHome = () => {
