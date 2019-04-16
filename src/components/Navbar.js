@@ -1,7 +1,8 @@
 function hamburgerClick() {
   let navbar = document.querySelector('nav'),
     hamburger = document.querySelector('.hamburger-container'),
-    calltoaction = document.querySelector('#calltoaction');
+    calltoaction = document.querySelector('#calltoaction'),
+    header = document.querySelector('header')
 
   if(hamburger.classList.contains('open')) {
     // close hamburger
@@ -15,9 +16,11 @@ function hamburgerClick() {
     setTimeout(() => {
       navbar.classList.remove('menu-open')
       navbar.classList.remove('menu-close')
+      header.classList.remove('height-to-fix')
     }, 250);
   }
   else {
+    header.classList.add('height-to-fix')
     // open hamburger
     hamburger.classList.add('open')
     // start menu open animation

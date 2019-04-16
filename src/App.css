@@ -547,6 +547,10 @@ header p {
   border-radius: 2rem;
 }
 
+.height-to-fix {
+  padding-top: 5rem;
+}
+
 /* * * * * * * * *
  * MEDIA QUERIES
  * * * * * * * * */
