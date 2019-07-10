@@ -30,6 +30,6 @@
     "critters-webpack-plugin": "^2.1.1",
     "preact": "^8.4.2",
     "preact-compat": "^3.18.4",
-    "serve": "^10.1.1"
+    "serve": "^11.1.0"
   }
 }
